@@ -11,9 +11,7 @@
 
 (function () {
     'use strict';
-    window.addEventListener('load', function () {
-        addPepe();
-    }, false);
+    addPepe();
 })();
 
 function addPepe() {
@@ -49,8 +47,8 @@ function addPepe() {
         "https://newheaven.nl/files/imagecache/63726_smilie_wet_175.gif"
     ]];
     let std = document.querySelector('[title=":)"]');
-    if (std != null && std.parentNode != null && std.parentNode.parentNode != null && std.parentNode.parentNode.parentNode != null) {
-        let tb = std.parentNode.parentNode.parentNode;
+    let tb = getNthParent(std, 3);
+    if (tb != null) {
         let title_index = 1;
         for (let i = 0; i < links.length; i++) {
             const row_e = links[i];
@@ -58,7 +56,7 @@ function addPepe() {
             tr.appendChild(document.createElement("td"));
             for (let j = 0; j < row_e.length; j++) {
                 const col_e = row_e[j];
-                add1(tr, col_e, col_e, title_index);
+                addTd(tr, col_e, col_e, title_index);
                 title_index++;
             }
             tb.appendChild(tr);
@@ -66,7 +64,17 @@ function addPepe() {
     }
 }
 
-function add1(tr, src, text, title) {
+function getNthParent(elem, i) {
+    if (elem == null) {
+        return null;
+    }
+    if (i <= 0) {
+        return elem;
+    }
+    return getNthParent(elem.parentElement, i - 1);
+}
+
+function addTd(tr, src, text, title) {
     let td = document.createElement("td");
     let img = document.createElement("img");
     img.src = src;

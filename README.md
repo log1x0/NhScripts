@@ -3,7 +3,7 @@ Tampermonkey scripts for nh.
 
 ***
 
-Select the desired script and copy it:
+Select the desired script and copy it ("Copy raw contents"):
 
 ![image](https://user-images.githubusercontent.com/107345625/175505044-c9bd32e0-cc8b-42f0-b1d0-bf5b39ead0be.png)
 
