@@ -61,6 +61,9 @@ function addPepe() {
             }
             tb.appendChild(tr);
         }
+
+        let ifr = this.window.top.document.querySelector('[name="shoutbox"]');
+        ifr.setAttribute("height", parseInt(ifr.getAttribute("height")) + (links.length - 1) * 30);
     }
 }
 
