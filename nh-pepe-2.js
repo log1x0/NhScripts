@@ -35,8 +35,7 @@ function addPepe() {
         "https://newheaven.nl/files/imagecache/63726_pepe-017.gif",
         "https://newheaven.nl/files/imagecache/63726_pepe-018.gif",
         "https://newheaven.nl/files/imagecache/63726_pepe-019.png",
-        "https://newheaven.nl/files/imagecache/63726_pepe-020.gif"
-    ], [
+        "https://newheaven.nl/files/imagecache/63726_pepe-020.gif",
         "https://newheaven.nl/files/imagecache/63726_pepe-021.gif",
         "https://newheaven.nl/files/imagecache/63726_pepe-022.gif",
         "https://newheaven.nl/files/imagecache/63726_pepe-023.gif",
@@ -44,8 +43,7 @@ function addPepe() {
         "https://newheaven.nl/files/imagecache/63726_pepe-025.gif",
         "https://newheaven.nl/files/imagecache/63726_pepe-026.gif",
         "https://newheaven.nl/files/imagecache/56594_pepePoint.png",
-        "https://newheaven.nl/files/imagecache/56594_bigPls.gif"
-    ], [
+        "https://newheaven.nl/files/imagecache/56594_bigPls.gif",
         "https://newheaven.nl/files/imagecache/63726_smilie_wet_175.gif"
     ]];
     let std = document.querySelector('[title=":)"]');
@@ -63,9 +61,6 @@ function addPepe() {
             }
             tb.appendChild(tr);
         }
-
-        let ifr = this.window.top.document.querySelector('[name="shoutbox"]');
-        ifr.setAttribute("height", parseInt(ifr.getAttribute("height")) + (links.length - 1) * 30);
     }
 }
 
